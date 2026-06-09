@@ -244,7 +244,27 @@
     width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-family:'Poppins'}
   @media(max-width:600px){.float-buy span.txt{display:none}.float-buy{width:60px;border-radius:50%;padding:0}}
 
-  /* sticky bottom cta (mobile-friendly bar) */
+  /* ===== SVG illustrations ===== */
+  .hero-deco{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5}
+  .hero-grid{position:relative;z-index:1}
+  .chapter .media svg{width:78%;height:auto;filter:drop-shadow(0 14px 24px rgba(0,0,0,.22))}
+  .book-art{width:78%;margin:6px auto 0}
+  .card .ico svg{width:32px;height:32px}
+  .stitch-divider{display:block;width:100%;height:26px;color:var(--rose);opacity:.8}
+  .stitch-divider line{stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-dasharray:2 12}
+
+  /* pattern gallery (garment vectors) */
+  .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;margin-top:42px}
+  .gitem{background:#fff;border-radius:16px;padding:18px 10px;text-align:center;
+    box-shadow:0 10px 26px rgba(60,20,40,.07);border:1px solid rgba(122,31,61,.06);transition:.3s}
+  .gitem:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .gitem svg{width:54px;height:54px;color:var(--plum);margin:0 auto 8px}
+  .gitem b{font-size:.82rem;color:var(--ink);font-weight:600}
+  @media(max-width:880px){.gallery{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:480px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+  /* sewing badge in offer */
+  .offer-art{width:120px;margin:0 auto 6px;color:var(--gold-light);opacity:.95}
 </style>
 </head>
 <body>
@@ -267,6 +287,14 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
+  <svg class="hero-deco" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path d="M-50 120 C 300 40, 500 260, 820 160 S 1300 60, 1500 180" stroke="#c98a9b" stroke-width="2" stroke-dasharray="2 12" fill="none" opacity=".5"/>
+    <path d="M-50 460 C 260 540, 560 360, 900 460 S 1280 540, 1500 420" stroke="#c9a24b" stroke-width="2" stroke-dasharray="2 12" fill="none" opacity=".5"/>
+    <circle cx="160" cy="420" r="34" stroke="#c98a9b" stroke-width="2" opacity=".4"/>
+    <circle cx="160" cy="420" r="6" fill="#c98a9b" opacity=".5"/>
+    <circle cx="1260" cy="150" r="26" stroke="#c9a24b" stroke-width="2" opacity=".4"/>
+    <circle cx="1260" cy="150" r="5" fill="#c9a24b" opacity=".5"/>
+  </svg>
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">✨ Edición Profesional 2026</span>
@@ -287,7 +315,16 @@
         <span class="ribbon">BESTSELLER</span>
         <div>
           <div class="b-top">Guía Profesional</div>
-          <div class="b-emoji">🪡🧵✂️</div>
+          <svg class="book-art" viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- dress form / maniqui -->
+            <line x1="60" y1="120" x2="60" y2="142" stroke="#e7cf94" stroke-width="3" stroke-linecap="round"/>
+            <path d="M40 142 H80" stroke="#e7cf94" stroke-width="3" stroke-linecap="round"/>
+            <path d="M60 26 C 50 26, 46 34, 46 44 C 36 56, 34 86, 44 104 C 52 116, 68 116, 76 104 C 86 86, 84 56, 74 44 C 74 34, 70 26, 60 26 Z" fill="#fff" opacity=".95"/>
+            <path d="M60 26 C 50 26, 46 34, 46 44 C 36 56, 34 86, 44 104 C 52 116, 68 116, 76 104 C 86 86, 84 56, 74 44 C 74 34, 70 26, 60 26 Z" stroke="#e7cf94" stroke-width="2.5" fill="none"/>
+            <ellipse cx="60" cy="24" rx="12" ry="5" fill="#e7cf94"/>
+            <path d="M46 60 H74" stroke="#c98a9b" stroke-width="1.6" stroke-dasharray="2 4"/>
+            <path d="M60 44 V104" stroke="#c98a9b" stroke-width="1.6" stroke-dasharray="2 4"/>
+          </svg>
         </div>
         <div class="b-title">El Arte de la Costura</div>
         <div class="b-bottom">Técnicas · Patrones · Secretos del oficio</div>
@@ -322,9 +359,19 @@
   </div>
 </section>
 
+<svg class="stitch-divider" viewBox="0 0 1200 20" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="10" x2="1200" y2="10"/></svg>
+
 <!-- ===== OFERTA / CONTADOR 1 ===== -->
 <section class="offer" id="oferta1">
   <div class="wrap reveal">
+    <svg class="offer-art" viewBox="0 0 120 90" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- sewing machine -->
+      <path d="M14 74 H106 V64 H24 V30 a8 8 0 018-8 H88 a6 6 0 016 6 V52"/>
+      <path d="M94 52 a6 6 0 01-6 6 H70"/>
+      <line x1="70" y1="58" x2="70" y2="68"/>
+      <circle cx="40" cy="38" r="5"/>
+      <path d="M88 24 v-8" /><circle cx="88" cy="13" r="3"/>
+    </svg>
     <span class="mini">🎁 Oferta de lanzamiento</span>
     <h2>Lleva el ebook completo + <span>7.000 patrones</span></h2>
     <p class="osub">Mientras lees esta guía, miles de moldes listos para imprimir te están esperando. Asegura tu acceso antes de que termine la promoción.</p>
@@ -339,8 +386,8 @@
 
     <div class="price">
       <span class="old">$47</span>
-      <span class="new">$19</span>
-      <span class="tag">-60%</span>
+      <span class="new">$12</span>
+      <span class="tag">-74%</span>
     </div>
     <a class="btn btn-buy" href="https://go.hotmart.com/X106176004X" target="_blank" rel="noopener">🛒 Quiero mi ebook + patrones</a>
     <div class="guarantee">
@@ -360,7 +407,16 @@
     </div>
 
     <div class="chapter reveal">
-      <div class="media"><span class="big-emoji">✂️</span></div>
+      <div class="media">
+        <svg viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="52" cy="58" r="18"/>
+          <circle cx="52" cy="142" r="18"/>
+          <line x1="66" y1="70" x2="170" y2="150"/>
+          <line x1="66" y1="130" x2="170" y2="50"/>
+          <path d="M118 100 L150 88" opacity=".7"/>
+          <path d="M40 100 H20 M150 50 l16 -6 M150 150 l16 6" opacity=".6" stroke-dasharray="2 8"/>
+        </svg>
+      </div>
       <div>
         <span class="lbl">El corte perfecto</span>
         <h3>Mide dos veces, corta una</h3>
@@ -375,7 +431,18 @@
     </div>
 
     <div class="chapter rev reveal">
-      <div class="media m2"><span class="big-emoji">🧵</span></div>
+      <div class="media m2">
+        <svg viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- thread spool -->
+          <rect x="62" y="40" width="76" height="120" rx="10"/>
+          <line x1="62" y1="60" x2="138" y2="60"/>
+          <line x1="62" y1="140" x2="138" y2="140"/>
+          <path d="M74 70 H126 M74 86 H126 M74 102 H126 M74 118 H126 M74 134 H126" stroke-width="3" opacity=".75"/>
+          <!-- needle + thread -->
+          <path d="M138 100 C 168 96, 176 120, 158 130 C 148 136, 152 150, 162 152" stroke-width="3" stroke-dasharray="2 7" opacity=".85"/>
+          <line x1="40" y1="150" x2="60" y2="150" opacity=".6"/>
+        </svg>
+      </div>
       <div>
         <span class="lbl">Puntadas esenciales</span>
         <h3>Domina 5 puntadas y cose casi todo</h3>
@@ -401,7 +468,21 @@
     </div>
 
     <div class="chapter reveal">
-      <div class="media m3"><span class="big-emoji">📐</span></div>
+      <div class="media m3">
+        <svg viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- pattern piece -->
+          <path d="M48 150 C 56 96, 80 60, 120 52 C 150 46, 162 70, 150 96 C 140 118, 150 140, 150 150 Z"/>
+          <path d="M48 150 H150" />
+          <line x1="70" y1="150" x2="70" y2="158" opacity=".7"/>
+          <line x1="100" y1="150" x2="100" y2="158" opacity=".7"/>
+          <line x1="130" y1="150" x2="130" y2="158" opacity=".7"/>
+          <path d="M92 84 L120 96" stroke-dasharray="3 7" opacity=".8"/>
+          <path d="M104 78 l10 -2 -4 9" opacity=".8"/>
+          <!-- ruler -->
+          <rect x="150" y="40" width="16" height="120" rx="3" opacity=".85"/>
+          <path d="M150 56 H160 M150 72 H160 M150 88 H160 M150 104 H160 M150 120 H160 M150 136 H160" stroke-width="3" opacity=".8"/>
+        </svg>
+      </div>
       <div>
         <span class="lbl">Lee cualquier molde</span>
         <h3>Los símbolos del patrón dejarán de ser un misterio</h3>
@@ -411,6 +492,33 @@
           <li>Adapta largos, anchos y pinzas a tu medida</li>
           <li>Crea tu propio archivo de moldes reutilizables</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="gitem reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 l6 5 6-5 6 6-5 5 3 21H14l3-21-5-5z"/></svg>
+        <b>Vestidos</b>
+      </div>
+      <div class="gitem reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7 l7 4 7-4 8 7-5 5v18H14V19l-5-5z"/><path d="M24 11v6"/></svg>
+        <b>Blusas</b>
+      </div>
+      <div class="gitem reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h16l-1 16-4 18h-5l-1-18-1 18h-5L13 23z"/><path d="M16 7h16"/></svg>
+        <b>Pantalones</b>
+      </div>
+      <div class="gitem reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h14l3 12-3 2-3-2-4 20h-3l-4-20-3 2-3-2z"/></svg>
+        <b>Faldas</b>
+      </div>
+      <div class="gitem reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18h20l-2 22H16z"/><path d="M19 18c0-6 10-6 10 0"/><path d="M13 18h22"/></svg>
+        <b>Bolsos</b>
+      </div>
+      <div class="gitem reveal">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9 l5 3 5-3 6 5-4 5 2 14a4 4 0 01-4 4H21a4 4 0 01-4-4l2-14-4-5z"/><path d="M21 31h6"/></svg>
+        <b>Ropa bebé</b>
       </div>
     </div>
 
@@ -534,7 +642,7 @@
 
     <div class="price">
       <span class="old">$47</span>
-      <span class="new">$19</span>
+      <span class="new">$12</span>
       <span class="tag">Hoy</span>
     </div>
     <a class="btn btn-buy" href="https://go.hotmart.com/X106176004X" target="_blank" rel="noopener">💖 Sí, lo quiero ahora</a>
